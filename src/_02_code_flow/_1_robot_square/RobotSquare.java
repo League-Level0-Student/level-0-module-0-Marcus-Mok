@@ -14,7 +14,19 @@ public class RobotSquare {
  
     	// This code makes a new Robot
     	Robot rob = new Robot();
-
+    	int count = 0;
+    	rob.penDown();
+rob.setSpeed(10);
+rob.move(200);
+rob.turn(90);
+rob.move(200);
+count += 1;
+while ( count < 4 ) {
+	DRAW
+	TURN
+	INCREASE COUNT
+}}
+}
         // PEN.  Put the robot's pen down so it can draw, Use this command:
 		 /**     rob.penDown();    **/
 
