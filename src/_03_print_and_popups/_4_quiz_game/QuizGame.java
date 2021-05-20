@@ -1,7 +1,27 @@
 package _03_print_and_popups._4_quiz_game;
 
+import javax.swing.JOptionPane;
+
 public class QuizGame {
 	public static void main(String[] args) {
+		
+		
+		int score = 0;
+				
+				String answer = JOptionPane.showInputDialog ("What is 3+7");
+		if (answer .equals("10")) { 
+			score += 1; 
+		} 
+		String answer2 = JOptionPane.showInputDialog ("What is 10 + 13");
+		if (answer2 .equals("23")) {
+			score +=1;
+		}
+		String answer3 = JOptionPane.showInputDialog ("What is 73 + 83");
+		if (answer3 .equals("156")) {
+			score +=1;
+		}
+		JOptionPane.showMessageDialog(null, "your score is " + score);
+		
 		
 		// Create a variable to hold the user's score. Set it equal to zero. 
 		

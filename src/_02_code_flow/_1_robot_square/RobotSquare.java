@@ -17,16 +17,15 @@ public class RobotSquare {
     	int count = 0;
     	rob.penDown();
 rob.setSpeed(10);
-rob.move(200);
-rob.turn(90);
-rob.move(200);
-count += 1;
+
 while ( count < 4 ) {
-	DRAW
-	TURN
-	INCREASE COUNT
-}}
+	rob.move(200);
+	rob.turn(90);
+	rob.move(200);
+	count += 1;
 }
+    }
+
         // PEN.  Put the robot's pen down so it can draw, Use this command:
 		 /**     rob.penDown();    **/
 
@@ -69,4 +68,4 @@ while ( count < 4 ) {
 
 
     }
-}
+

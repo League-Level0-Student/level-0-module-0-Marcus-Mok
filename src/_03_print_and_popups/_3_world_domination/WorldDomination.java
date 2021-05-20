@@ -13,6 +13,28 @@ public class WorldDomination {
 
 		// 3. Otherwise, tell them to sign up for classes at The League.
 
+		
+		String answer = JOptionPane.showInputDialog ("Do you know how to write code?");
+		if (answer .equals("yes")) {
+			JOptionPane.showMessageDialog(null,"You will rule the world");
+		} 
+		else {
+			JOptionPane.showMessageDialog(null, "Sign up for classes at The League");
+		}
+		
+			
+		
+		
+		
+		
+		
+			
+					
+					
+					
+	
+
 	}
+	
 }
 
