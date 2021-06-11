@@ -14,7 +14,12 @@ public class DragonFight {
 		JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
 
 		// 1. Create some variables to hold health levels
+		int playerhealth = 100;
+		int dragonhealth = 100;
 		
+		int playerAttack = 0;
+				int dragonAttack = 0;
+				
 			// playerHealth to store your health - set it equal to 100
 	
 			// dragonHealth to store the dragon's health - set it equal to 100
@@ -29,8 +34,30 @@ public class DragonFight {
 
 		
 		//  This while statement will cause the game attack code to repeat
-		while (true) {
-
+		while (true) { 
+			String responce = JOptionPane.showInputDialog ("kick or yell?");
+			if (responce .equalsIgnoreCase("yell")) {
+				playerAttack = ran.nextInt(10);  
+			}
+			if (responce .equalsIgnoreCase("kick")) {
+				playerAttack = ran.nextInt(25);  
+			}
+			
+			dragonhealth = dragonhealth - playerAttack;
+			
+			dragonAttack = ran.nextInt(35);
+			playerhealth = playerhealth - dragonAttack;
+			
+			if (playerhealth <= 0) {
+				playerLost();
+			}
+			if (dragonhealth <= 0) {
+				dragonLost();
+			}
+			
+			JOptionPane.showMessageDialog(null, "the dragon health is " + dragonhealth);
+			JOptionPane.showMessageDialog(null, "your health is " + playerhealth);
+			
 			// THE PLAYER ATTACKS THE DRAGON
 
 				// 3. Ask the player in a pop-up if they want to attack the dragon with a yell
@@ -77,14 +104,14 @@ public class DragonFight {
 
 	static void playerLost() {
 		// 11. Tell the player that they have been defeated by the dragon and have no treasure
-
+		JOptionPane.showMessageDialog(null, "you were defeated and got no treasure");
 
 		System.exit(0);   //This code ends the program
 	}
 
 	static void dragonLost() {
 		// 12. Tell the user that the dragon has been defeated and they get a ton of gold!
-
+		JOptionPane.showMessageDialog(null, "you defeated the dragon and got a ton of gold!");
 		System.exit(0);   //This code ends the program
 	}
 
